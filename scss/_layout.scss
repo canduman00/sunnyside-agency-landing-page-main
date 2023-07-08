@@ -1,0 +1,111 @@
+.header-wrapper{
+    header{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .header-center-items{
+        margin-top:4rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap:2rem;
+    }
+}
+
+main{
+    .flex-half{
+        display:flex;
+        flex-direction: column;
+        .half-text-section, .half-img{
+            flex-basis:50%;
+        }
+
+        .half-text-section{
+            padding:2rem 1.75rem;
+            text-align: center;
+            & > *{
+                margin-block:1rem;
+            }
+        }
+
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    
+    .background-wrapper{
+        position:relative;
+
+
+        .bg-wrapper-text{
+            position:absolute;
+            z-index:1;
+            bottom:2rem;
+            padding:1rem;
+            margin-inline:auto;
+            .back-title{
+                margin-bottom:1rem;
+            }
+        }
+
+    }
+
+    .testimonial{
+        padding:4rem 1rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap:3rem;
+        &__wrapper{
+            display:flex;
+            flex-direction: column;
+            gap:3rem;
+        }
+        &__testimonial{
+            text-align: center;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap:2rem;
+            
+            .test-img{
+                border-radius: 50%;
+                width:75px;
+            }
+
+        }
+    }
+    
+
+    .grid-quarter{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+footer{
+    background-color: var(--clr-dark-moderate-cyan);
+    padding:3rem 0rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+
+    .secondary-nav a{
+        margin-inline:2rem;
+    }
+    .socials{
+        list-style-type: none;
+        display:flex;
+        gap:2rem;
+        padding:0;
+        margin-block:3rem 1rem;
+
+        li:hover svg path{
+            fill:var(--clr-neutral-100);
+        }
+    }
+
+}

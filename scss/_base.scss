@@ -11,7 +11,8 @@
     --clr-dark-desaturated-cyan:hsl(167, 40%, 24%);
     --clr-dark-blue:hsl(198, 62%, 26%);
 
-    --clr-dark-moderate-cyan:hsl(168, 34%, 41%);
+    --clr-dark-moderate-cyan-2:hsl(168, 34%, 41%);
+    --clr-dark-moderate-cyan:hsl(167, 44%, 70%);
 
     --ff-base:"Barlow", sans-serif;
     --ff-secondary:"Fraunces", serif;
@@ -22,6 +23,7 @@
 
     --fs-300:1rem;
     --fs-400:1.125rem; 
+    --fs-500:1.875rem;
 }
 
 /*CSS Reset*/
@@ -89,13 +91,13 @@ a{
 }
 .nav-item{
     a{
-        color:var(--clr-neutral-100);
+        color:var(--clr-neutral-400);
     }
     button{
         text-transform: uppercase;
         font-family: var(--ff-secondary);
         font-size:var(--fs-300);
-        color:var(--clr-neutral-100);
+        color:var(--clr-neutral-700);
     }
 }
 
@@ -112,6 +114,7 @@ h1.primary-title{
     font-family: var(--ff-secondary);
     font-weight:var(--fw-bold);
     color:var(--clr-neutral-700);
+    font-size:var(--fs-500);
 }
 
 .half-text-link{
@@ -125,10 +128,10 @@ h1.primary-title{
     font-family: var(--ff-secondary);
     font-weight: var(--fw-bold);
 }
-.cherry{
+.background-wrapper:has(.cherry){
     color:var(--clr-dark-desaturated-cyan);
 }
-.orange{
+.background-wrapper:has(.orange){
     color:var(--clr-dark-blue);
 }
 .back-text{
@@ -161,7 +164,7 @@ h1.primary-title{
 }
 footer{
     .secondary-nav a{
-        color:var(--clr-dark-desaturated-cyan);
+        color:var(--clr-dark-moderate-cyan-2);
         font-size: var(--fs-300);
 
         &:hover{
