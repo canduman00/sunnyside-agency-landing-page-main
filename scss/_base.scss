@@ -22,8 +22,21 @@
     --fw-bold:900;
 
     --fs-300:1rem;
-    --fs-400:1.125rem; 
+    --fs-400:1.125rem;
+    --fs-450:1.25rem;
     --fs-500:1.875rem;
+    --fs-800:3rem;
+}
+
+/*breakpoint 718px*/
+$breakpoints:(
+  "medium":44.875em
+);
+
+@mixin breakpoint-up($size){
+  @media(min-width:map-get($breakpoints,$size)){
+    @content;
+  }
 }
 
 /*CSS Reset*/
@@ -99,6 +112,12 @@ a{
         font-size:var(--fs-300);
         color:var(--clr-neutral-700);
     }
+    @include breakpoint-up(medium){
+      a{
+        color:var(--clr-neutral-100);
+      }
+      
+    }
 }
 
 h1.primary-title{
@@ -108,6 +127,11 @@ h1.primary-title{
     letter-spacing: 8px;
     line-height: 1.2;
     color:var(--clr-neutral-100);
+
+    @include breakpoint-up(medium){
+      font-size:3rem;
+      margin-bottom: 2rem;
+    }
 }
 
 .half-text-title{
@@ -122,6 +146,19 @@ h1.primary-title{
     font-family: var(--ff-secondary);
     color:var(--clr-neutral-700);
     font-size:1rem;
+}
+
+@include breakpoint-up(medium){
+  .half-text-title{
+    font-size:var(--fs-800);
+    line-height: 1;
+    &+p{
+      font-size:var(--fs-450);
+    }
+  }
+  .half-text-link{
+    font-size: var(--fs-400);
+  }
 }
 
 .back-title{

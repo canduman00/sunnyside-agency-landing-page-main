@@ -1,3 +1,5 @@
+@use "./base" as u;
+
 /*header*/
 
 .header-wrapper{
@@ -8,6 +10,14 @@
 
     min-height:70vh;
     padding:1rem;
+
+    @include u.breakpoint-up(medium){
+        background-image: url("../images/desktop/image-header.jpg");
+        background-position: center;
+        .hamburger{
+            display:none;
+        }
+    }
 
     header{
         .primary-navigation{
@@ -24,7 +34,14 @@
             &.active{
                 display:block;
             }
-
+            @include u.breakpoint-up(medium){
+                position:static;
+                background: none;
+                display: block;
+                padding:0;
+                width:auto;
+                margin:0;
+            }
             ul.nav-list{
                 list-style-type: none;
                 display: flex;
@@ -40,9 +57,23 @@
                     background-color: var(--clr-yellow);
                     cursor:pointer;
                 }
+
+                @include u.breakpoint-up(medium){
+                    flex-direction: row;
+
+                    .nav-button{
+                        background-color: var(--clr-neutral-100);
+                        &:hover{
+                            color:var(--clr-neutral-100);
+                            background-color: hsla(0, 0%, 100%, .3);
+                        }
+                    }
+
+                }
             }
+            
         }
-    }
+        }
 
 }
 
