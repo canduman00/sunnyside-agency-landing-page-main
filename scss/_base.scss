@@ -95,6 +95,7 @@ body{
     font-size:var(--fs-400);
     color:var(--clr-neutral-400);
 
+
 }
 
 /*typography*/
@@ -174,6 +175,14 @@ h1.primary-title{
 .back-text{
     font-size:var(--fs-300);
 }
+@include breakpoint-up(medium){
+  .back-title{
+    font-size:var(--fs-500);
+  }
+  .back-text{
+    font-size:var(--fs-400);
+  }
+}
 
 .testimonial{
     &__title{
@@ -197,6 +206,11 @@ h1.primary-title{
             font-size: var(--fs-300);
             color:var(--clr-neutral-300);
         }
+    }
+    @include breakpoint-up(medium){
+      &__title{
+        letter-spacing: .5rem;
+      }
     }
 }
 footer{

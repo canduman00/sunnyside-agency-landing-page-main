@@ -47,6 +47,7 @@ main{
         .flex-half{
             flex-direction: row;
             align-items: center;
+            margin:0;
             .half-img{
                 img{
                     width:100%;
@@ -55,7 +56,8 @@ main{
             }
             .half-text-section{
                 text-align: left;
-                padding:9rem;
+                //padding:8.75rem;
+                padding:5%;
                 & > *{
                     margin-block:2rem;
                 }
@@ -66,11 +68,10 @@ main{
     .background-wrapper{
         position:relative;
 
-
         .bg-wrapper-text{
             position:absolute;
             z-index:1;
-            bottom:2rem;
+            bottom:5%;
             padding:1rem;
             margin-inline:auto;
             .back-title{
@@ -78,16 +79,24 @@ main{
             }
         }
 
+
         @include u.breakpoint-up(medium){
             &{
                 flex-basis:50%;
-                picture img{
-                    width:100%;
-                    height:100%;
+                picture{
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                    
+
                 }
                 .bg-wrapper-text{
-                    bottom:4rem;
-                    padding:2rem 10rem;
+                    //bottom:4rem;
+                    bottom:5%;
+                    //padding:2rem 10rem;
+                    padding:2.5% 15%;
+
                 }
             }
         }
@@ -118,12 +127,29 @@ main{
             }
 
         }
+        @include u.breakpoint-up(medium){
+            padding-block: 7rem;
+            &__wrapper{
+                flex-direction: row;
+                padding-inline:10%;
+                & > *{
+                    flex-basis:33%;
+                }
+            }
+            &__testimonial{
+                gap:3rem;
+            }
+        }
     }
     
 
     .grid-quarter{
         display:grid;
         grid-template-columns: 1fr 1fr;
+
+        @include u.breakpoint-up(medium){
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 }
 

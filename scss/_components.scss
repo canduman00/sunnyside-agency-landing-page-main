@@ -10,7 +10,9 @@
 
     min-height:70vh;
     padding:1rem;
-
+    .hamburger{
+        cursor:pointer;
+    }
     @include u.breakpoint-up(medium){
         background-image: url("../images/desktop/image-header.jpg");
         background-position: center;
